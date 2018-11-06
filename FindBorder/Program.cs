@@ -12,23 +12,23 @@ namespace FindBorder
         static void Main(string[] args)
         {         
             List<Point> list = new List<Point>();
-            
+
             /*min max  в разных точках*/
-            //list.Add(new Point(2, 10));
-            //list.Add(new Point(4, 1));
-            //list.Add(new Point(5, 6));
-            //list.Add(new Point(6, 15));
-            //list.Add(new Point(9, 5));
-            //list.Add(new Point(10, 3));
-            //list.Add(new Point(12, 11));
+            list.Add(new Point(2, 10));
+            list.Add(new Point(4, 1));
+            list.Add(new Point(5, 6));
+            list.Add(new Point(6, 15));           
+            list.Add(new Point(10, 3));
+            list.Add(new Point(9, 5));
+            list.Add(new Point(12, 11));
 
             /* min и max в обной точке*/
-            list.Add(new Point(1, 15));
-            list.Add(new Point(2, 2));
-            list.Add(new Point(10, 1));
-            list.Add(new Point(7, 9));
-            list.Add(new Point(6, 14));
-            list.Add(new Point(4, 10));
+            //list.Add(new Point(1, 15));
+            //list.Add(new Point(2, 2));
+            //list.Add(new Point(10, 1));
+            //list.Add(new Point(7, 9));
+            //list.Add(new Point(6, 14));
+            //list.Add(new Point(4, 10));
 
             foreach (var item in list)
             {
@@ -41,9 +41,7 @@ namespace FindBorder
             foreach (var item in newListBorder)
             {
                 Console.WriteLine("{0} - {1}", item.x, item.y);
-            }    
-            
-                   
+            }                     
         }
 
         static int GetMaxX(List<Point> list, int count)
@@ -139,7 +137,6 @@ namespace FindBorder
                             {
                                 double y = (border[i].y + k * border[j].y) / (1 + k);
                                 C.y = (int)y;
-
                                 ListC.Add(C);
                             }
                         }
